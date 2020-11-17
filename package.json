@@ -1,0 +1,68 @@
+{
+  "name": "@marketing-campaigns/handbag-trends",
+  "description": "",
+  "version": "0.61.0",
+  "repository": {
+    "type": "git",
+    "url": "git@code.devops.fds.com:polaris/campaign/handbag-trends.git"
+  },
+  "config": {
+    "environment": [
+      {
+        "name": "key1",
+        "local": {
+          "mcom": "value1",
+          "bcom": "value2"
+        },
+        "prod": {
+          "mcom": "__VALUE3__",
+          "bcom": "__VALUE4__"
+        }
+      },
+      {
+        "name": "XAPI_HOST",
+        "local": {
+          "mcom": "https://mcom.xapi.com",
+          "bcom": "https://bcom.xapi.com"
+        },
+        "prod": {
+          "mcom": "__VALUE5__",
+          "bcom": "__VALUE6__"
+        }
+      }
+    ],
+    "pages": [
+      {
+        "path": "/",
+        "template": "main",
+        "autoHeader": true,
+        "autoFooter": true,
+        "quickview": true,
+        "tags": {
+          "description": "Fall Handbag Trends are hot this season at Macy's. From the red handbag to a retro revamp, express your style for a fresh fall look.",
+          "canonical": "https://www.macys.com/p/handbag-trends/",
+          "robots": "index, follow",
+          "title": "Fall Handbags and Accessories Trends - Macys"
+        },
+        "coremetrics": {
+          "pageType": "staticpages",
+          "pageId": "handbagtrends",
+          "categoryID": "standard"
+        }
+      }
+    ],
+    "macysCliVersion": "1.298.0"
+  },
+  "engines": {
+    "node": "8.x",
+    "npm": "5.x"
+  },
+  "main": "src/handbag-trends.js",
+  "devDependencies": {
+    "@core/dev-server": "^1.0.0",
+    "@core/lib": "^1.0.0",
+    "@core/server": "^1.0.0",
+    "lodash": "^4.17.4"
+  },
+  "dependencies": {}
+}
